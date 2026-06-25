@@ -47,127 +47,144 @@
         </a>
       </div>
 
-      <div class="carousel">
+      <div class="project-finder-window" aria-label="Finder project carousel">
+        <aside class="project-finder-sidebar">
+          <div class="finder-lights" aria-hidden="true">
+            <span class="finder-light red"></span>
+            <span class="finder-light yellow"></span>
+            <span class="finder-light green"></span>
+          </div>
 
-        <button class="carousel-btn prev" aria-label="Previous project">‹</button>
+          <div class="finder-sidebar-group">
+            <p>Favorites</p>
+            <button class="finder-sidebar-item active" type="button"><span></span>Showcase</button>
+            <button class="finder-sidebar-item" type="button"><span></span>Projects</button>
+            <button class="finder-sidebar-item" type="button"><span></span>Design</button>
+            <button class="finder-sidebar-item" type="button"><span></span>Code</button>
+          </div>
 
-        <div class="carousel-track">
+          <div class="finder-sidebar-group">
+            <p>Locations</p>
+            <button class="finder-sidebar-item" type="button"><span></span>Portfolio</button>
+            <button class="finder-sidebar-item" type="button"><span></span>iCloud Drive</button>
+          </div>
+        </aside>
 
-          <article class="project-card">
-            <div class="project-preview">
-              <span>Landing Page</span>
-            </div>
+        <div class="project-finder-toolbar">
+          <div class="finder-nav-buttons" aria-label="Project carousel controls">
+            <button class="finder-round-btn" id="projectFinderPrev" type="button" aria-label="Previous project">&#8249;</button>
+            <button class="finder-round-btn" id="projectFinderNext" type="button" aria-label="Next project">&#8250;</button>
+          </div>
 
-            <h3>Project Alpha</h3>
+          <div class="finder-title-stack">
+            <h3>Project Showcase</h3>
+            <span id="projectFinderCounter">1 of 6</span>
+          </div>
 
-            <div class="tags">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>UI</span>
-            </div>
+          <div class="finder-view-buttons" aria-label="Finder view options">
+            <button class="finder-view-btn active" type="button" aria-label="Icon view"><span class="finder-grid-icon" aria-hidden="true"><span></span><span></span><span></span><span></span></span></button>
+            <button class="finder-view-btn" type="button" aria-label="List view"><span class="finder-list-icon" aria-hidden="true"><span></span><span></span><span></span></span></button>
+            <button class="finder-view-btn" type="button" aria-label="Column view"><span class="finder-column-icon" aria-hidden="true"><span></span><span></span><span></span></span></button>
+          </div>
 
-            <p>A simple landing page template with responsive sections and a clean layout.</p>
-
-            <a href="#">View details →</a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-preview">
-              <span>Dashboard</span>
-            </div>
-
-            <h3>Project Beta</h3>
-
-            <div class="tags">
-              <span>Design</span>
-              <span>Cards</span>
-              <span>Layout</span>
-            </div>
-
-            <p>A dashboard-style interface with glass cards, buttons and content blocks.</p>
-
-            <a href="#">View details →</a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-preview">
-              <span>Portfolio</span>
-            </div>
-
-            <h3>Project Gamma</h3>
-
-            <div class="tags">
-              <span>Portfolio</span>
-              <span>Responsive</span>
-              <span>Web</span>
-            </div>
-
-            <p>A portfolio concept for presenting work, skills and contact information.</p>
-
-            <a href="#">View details →</a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-preview">
-              <span>Gallery</span>
-            </div>
-
-            <h3>Project Delta</h3>
-
-            <div class="tags">
-              <span>Gallery</span>
-              <span>Grid</span>
-              <span>CSS</span>
-            </div>
-
-            <p>A minimal image gallery template with clean spacing and soft visual style.</p>
-
-            <a href="#">View details →</a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-preview">
-              <span>App UI</span>
-            </div>
-
-            <h3>Project Epsilon</h3>
-
-            <div class="tags">
-              <span>App</span>
-              <span>Glass</span>
-              <span>Prototype</span>
-            </div>
-
-            <p>A small app interface concept using blurred panels and rounded controls.</p>
-
-            <a href="#">View details →</a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-preview">
-              <span>Case Study</span>
-            </div>
-
-            <h3>Project Zeta</h3>
-
-            <div class="tags">
-              <span>Content</span>
-              <span>Case Study</span>
-              <span>Template</span>
-            </div>
-
-            <p>A case study section for describing goals, process and final results.</p>
-
-            <a href="#">View details →</a>
-          </article>
-
+          <input class="finder-search" type="search" placeholder="Search" aria-label="Search projects">
         </div>
 
-        <button class="carousel-btn next" aria-label="Next project">›</button>
+        <div class="project-finder-main">
+          <div class="finder-preview-stage" aria-live="polite">
+            <article class="finder-preview-card" id="projectFinderPreview">
+              <div class="finder-preview-top">
+                <h3 id="projectFinderTitle">Landing Page</h3>
+                <span id="projectFinderKind">Website Project</span>
+              </div>
 
+              <div class="finder-preview-stats">
+                <div>
+                  <span>Stack</span>
+                  <strong id="projectFinderStack">HTML</strong>
+                </div>
+                <div>
+                  <span>Status</span>
+                  <strong id="projectFinderStatus">Ready</strong>
+                </div>
+                <div>
+                  <span>Focus</span>
+                  <strong id="projectFinderFocus">Hero</strong>
+                </div>
+              </div>
+
+              <p id="projectFinderDescription">A clean landing page project with responsive sections, strong hierarchy and a polished first screen.</p>
+            </article>
+          </div>
+
+          <div class="finder-file-carousel" aria-label="Project files carousel">
+            <button class="finder-step-btn" id="projectFinderPrevFile" type="button" aria-label="Previous project">&#8249;</button>
+
+            <div class="finder-file-track" id="projectFinderFileTrack">
+              <button class="finder-file-item active" type="button" data-project="0" aria-current="true">
+                <span class="finder-file-icon"></span>
+                <span>Landing Page</span>
+              </button>
+
+              <button class="finder-file-item" type="button" data-project="1">
+                <span class="finder-file-icon"></span>
+                <span>Dashboard UI</span>
+              </button>
+
+              <button class="finder-file-item" type="button" data-project="2">
+                <span class="finder-file-icon"></span>
+                <span>Portfolio Site</span>
+              </button>
+
+              <button class="finder-file-item" type="button" data-project="3">
+                <span class="finder-file-icon"></span>
+                <span>Gallery Grid</span>
+              </button>
+
+              <button class="finder-file-item" type="button" data-project="4">
+                <span class="finder-file-icon"></span>
+                <span>App Prototype</span>
+              </button>
+
+              <button class="finder-file-item" type="button" data-project="5">
+                <span class="finder-file-icon"></span>
+                <span>Case Study</span>
+              </button>
+            </div>
+
+            <button class="finder-step-btn" id="projectFinderNextFile" type="button" aria-label="Next project">&#8250;</button>
+          </div>
+        </div>
+
+        <aside class="project-finder-inspector">
+          <div class="finder-inspector-preview" aria-hidden="true"></div>
+          <h3 id="projectFinderInspectorTitle">Landing Page</h3>
+          <p id="projectFinderInspectorType">Website Project document</p>
+
+          <div class="finder-info-block">
+            <h4>Information</h4>
+            <div><strong>Created</strong><span>Today 09:41</span></div>
+            <div><strong>Modified</strong><span>Today 10:28</span></div>
+            <div><strong>Size</strong><span id="projectFinderSize">48 KB</span></div>
+            <div><strong>Tags</strong><span id="projectFinderTags">HTML, CSS, UI</span></div>
+          </div>
+
+          <div class="finder-info-block">
+            <h4>Notes</h4>
+            <p>Add project notes...</p>
+          </div>
+        </aside>
+
+        <footer class="project-finder-path" aria-label="File path">
+          <span>Macintosh HD</span>
+          <span>></span>
+          <span>Users</span>
+          <span>></span>
+          <span>Portfolio</span>
+          <span>></span>
+          <span id="projectFinderPath">Landing Page</span>
+        </footer>
       </div>
-
-      <div class="carousel-dots" aria-label="Carousel pagination"></div>
 
     </section>
 
